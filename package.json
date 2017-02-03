@@ -16,9 +16,10 @@
   "keywords": [
     "cache",
     "express",
-    "expressjs",
     "express-cache",
     "express-cache-response",
+    "express-middleware",
+    "expressjs",
     "memory-cache",
     "middleware",
     "response"
