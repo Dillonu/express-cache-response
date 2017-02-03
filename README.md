@@ -37,6 +37,7 @@ cache({
  * Add way to expire cached content by a certain time or duration.
  * Add way to specify max memory usage. Least hit cached content are removed first when memory is full.
  * Add way to determine maximum amount of memory usage allowed to be used to prevent out of memory issues.
+ * Add way to add custom storage engines.
 
 ## License
 [MIT](https://raw.githubusercontent.com/Dillonu/express-cache-response/master/LICENSE)
