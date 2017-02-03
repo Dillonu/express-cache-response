@@ -1,0 +1,39 @@
+{
+  "name": "express-cache-response",
+  "version": "1.0.0",
+  "description": "Caches the response of static GETs in memory",
+  "main": "index.js",
+  "scripts": {
+    "release": "release-it",
+    "release-minor": "release-it minor",
+    "release-major": "release-it major",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dillonu/express-cache-response.git"
+  },
+  "keywords": [
+    "cache",
+    "express",
+    "expressjs",
+    "express-cache",
+    "express-cache-response",
+    "memory-cache",
+    "middleware",
+    "response"
+  ],
+  "author": "Dillon Uzar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dillonu/express-cache-response/issues"
+  },
+  "homepage": "https://github.com/Dillonu/express-cache-response#readme",
+  "dependencies": {
+    "memory-cache": "^0.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "release-it": "^2.5.3"
+  }
+}
