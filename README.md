@@ -32,6 +32,7 @@ cache({
 ```
 
 ## Roadmap
+ * For requests that use etag and not in cache, remove etag from request, run request, cache result, and then perform etag check for response.
  * Add way to filter content to cache.
  * Add way to remove cached content via api.
  * Add way to expire cached content by a certain time or duration.

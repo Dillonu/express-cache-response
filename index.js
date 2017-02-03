@@ -50,16 +50,18 @@ module.exports = function (options = {}) {
             processChunk(chunk, encoding);
             // Send body before caching to make use of async io:
             _end.apply(res, arguments);
-            // Cache response:
-            cache.put(req.path, {
-                body: Buffer.concat(chunks), // Merge chunks
-                // Store headers that were set:
-                headers: Object.keys(res._headers).reduce((headers, name) => {
-                    // Resolve HeaderName: value
-                    headers[res._headerNames[name]] = res._headers[name];
-                    return headers;
-                }, {})
-            });
+            // Cache response if 200:
+            if (res.statusCode === 200) {
+                cache.put(req.path, {
+                    body: Buffer.concat(chunks), // Merge chunks
+                    // Store headers that were set:
+                    headers: Object.keys(res._headers).reduce((headers, name) => {
+                        // Resolve HeaderName: value
+                        headers[res._headerNames[name]] = res._headers[name];
+                        return headers;
+                    }, {})
+                });
+            }
         };
 
         // Go to next middleware:
